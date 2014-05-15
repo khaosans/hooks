@@ -11,35 +11,37 @@ public class TwitterApplication {
     private final Logger logger = Logger.getLogger(TwitterApplication.class.getName());
 
     public static void main(String[] args) throws TwitterException {
-        StatusListener listener = new StatusListener() {
-            public void onStatus(Status status) {
-                System.out.println(status.getUser().getName() + " : " + status.getText());
-            }
 
-            public void onDeletionNotice(StatusDeletionNotice statusDeletionNotice) {
-            }
-
-            public void onTrackLimitationNotice(int numberOfLimitedStatuses) {
-            }
-
-            @Override
-            public void onScrubGeo(long l, long l2) {
-                System.out.println("Got scrub_geo event userId:" + l + " upToStatusId:" + l2);
-            }
-
-            @Override
-            public void onStallWarning(StallWarning stallWarning) {
-                System.out.println("Got stall warning:" + stallWarning);
-            }
-
-            public void onException(Exception ex) {
-                ex.printStackTrace();
-            }
-        };
-        TwitterStream twitterStream = new TwitterStreamFactory().getInstance();
-        twitterStream.addListener(listener);
-        // sample() method internally creates a thread which manipulates TwitterStream and calls these adequate listener methods continuously.
-        twitterStream.sample();
+        new TwitterApplication().publish();
+//        StatusListener listener = new StatusListener() {
+//            public void onStatus(Status status) {
+//                System.out.println(status.getUser().getName() + " : " + status.getText());
+//            }
+//
+//            public void onDeletionNotice(StatusDeletionNotice statusDeletionNotice) {
+//            }
+//
+//            public void onTrackLimitationNotice(int numberOfLimitedStatuses) {
+//            }
+//
+//            @Override
+//            public void onScrubGeo(long l, long l2) {
+//                System.out.println("Got scrub_geo event userId:" + l + " upToStatusId:" + l2);
+//            }
+//
+//            @Override
+//            public void onStallWarning(StallWarning stallWarning) {
+//                System.out.println("Got stall warning:" + stallWarning);
+//            }
+//
+//            public void onException(Exception ex) {
+//                ex.printStackTrace();
+//            }
+//        };
+//        TwitterStream twitterStream = new TwitterStreamFactory().getInstance();
+//        twitterStream.addListener(listener);
+//        // sample() method internally creates a thread which manipulates TwitterStream and calls these adequate listener methods continuously.
+//        twitterStream.sample();
     }
 
     private void publish() {
@@ -82,7 +84,7 @@ public class TwitterApplication {
 
     private void searchTweets() throws TwitterException {
         Twitter twitter = TwitterFactory.getSingleton();
-        Query query = new Query("khaosans");
+        Query query = new Query("ducloc1803");
         QueryResult result = twitter.search(query);
         for (Status status : result.getTweets()) {
             System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
