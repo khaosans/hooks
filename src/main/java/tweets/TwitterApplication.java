@@ -11,8 +11,7 @@ public class TwitterApplication {
     private final Logger logger = Logger.getLogger(TwitterApplication.class.getName());
 
     public static void main(String[] args) throws TwitterException {
-
-        new TwitterApplication().publish();
+        new TwitterApplication().searchTweets();
 //        StatusListener listener = new StatusListener() {
 //            public void onStatus(Status status) {
 //                System.out.println(status.getUser().getName() + " : " + status.getText());

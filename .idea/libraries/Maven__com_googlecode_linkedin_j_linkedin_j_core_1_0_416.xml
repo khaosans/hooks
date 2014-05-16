@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.googlecode.linkedin-j:linkedin-j-core:1.0.416">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/linkedin-j/linkedin-j-core/1.0.416/linkedin-j-core-1.0.416.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/linkedin-j/linkedin-j-core/1.0.416/linkedin-j-core-1.0.416-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/linkedin-j/linkedin-j-core/1.0.416/linkedin-j-core-1.0.416-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
