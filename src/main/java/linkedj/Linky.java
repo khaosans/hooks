@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 public class Linky {
     private static final String PROTECTED_RESOURCE_URL = "http://api.linkedin.com/v1/people/~/connections:(id,last-name)";
+    private static final String PROTECTED_SHIT = "http://api.linkedin.com/v1/people/~:(first-name,last-name,headline,picture-url)";
+    private static final String UPDATES = "http://api.linkedin.com/v1/people/~/network/updates";
 
     public static void main(String[] args) {
         OAuthService service = new ServiceBuilder()
@@ -43,7 +45,7 @@ public class Linky {
 
         // Now let's go and ask for a protected resource!
         System.out.println("Now we're going to access a protected resource...");
-        OAuthRequest request = new OAuthRequest(Verb.GET, PROTECTED_RESOURCE_URL);
+        OAuthRequest request = new OAuthRequest(Verb.GET, UPDATES);
         service.signRequest(accessToken, request);
         Response response = request.send();
         System.out.println("Got it! Lets see what we found...");
