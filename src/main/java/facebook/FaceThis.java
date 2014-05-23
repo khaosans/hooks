@@ -14,10 +14,7 @@ import java.util.List;
  */
 public class FaceThis {
 
-    static java.lang.String MY_ACCESS_TOKEN = "CAACEdEose0cBAKA3dEuZAXoh9vFlI3ulmt04fw1qwE4lLLOFQ9fyD2G4ZAZBo8Ua0gtDsty" +
-            "xVmrvVDzEkw8z1CuZB9NKeBNmHT9GRIzBRIOiqUHjYWbvaroKZBYNCokxSL8uVCuDe7OPNhSDCzNLigTmYZBo0HSBDjVkYeOHDuV9N1Jm" +
-            "inGZBZCkbyuXv6C0tcEZD";
-
+    static java.lang.String MY_ACCESS_TOKEN = "CAACEdEose0cBAEvQGPqoi8gMhp9J9bofE8lCCvWZBZABOaN8uEloVWZCz6tTkElq8UFaZCNvbpT586C8ROZBkV6GybCjt64ZAyNhlPwMuzneyL64As29PwonL9Fn38iKsAVvTaOZCj7KtRnVo5Cy7v4NupTZA2dwXyKx3TLhYpcCZBjksVQS6UUZBuNTmQy3JU6aGsYSK1ZCPG5GAZDZD";
     private static FacebookClient facebookClient;
 
     public static void main(String[] args) {

@@ -81,16 +81,27 @@ public class TwitterApplication {
         }
     }
 
-    private void searchTweets() throws TwitterException {
+    public void searchTweets() throws TwitterException {
         Twitter twitter = TwitterFactory.getSingleton();
-        Query query = new Query("ducloc1803");
+        Query query = new Query("khaosans");
         QueryResult result = twitter.search(query);
         for (Status status : result.getTweets()) {
             System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
         }
     }
 
-    private void getTimeline() throws TwitterException {
+    public String getTweets() throws TwitterException {
+        Twitter twitter = TwitterFactory.getSingleton();
+        String tweets = null;
+        Query query = new Query("khaosans");
+        QueryResult result = twitter.search(query);
+        for (Status status : result.getTweets()) {
+            tweets+=status.getUser().getScreenName() + ":" + status.getText()+"\n";
+        }
+        return tweets;
+    }
+
+    public void getTimeline() throws TwitterException {
         Twitter twitter = TwitterFactory.getSingleton();
         List<Status> statuses = twitter.getHomeTimeline();
         System.out.println("Showing home timeline.");

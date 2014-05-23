@@ -20,6 +20,7 @@
     <orderEntry type="library" name="Maven: oauth.signpost:signpost-core:1.2.1.2" level="project" />
     <orderEntry type="library" name="Maven: net.sf.kxml:kxml2:2.3.0" level="project" />
     <orderEntry type="library" name="Maven: commons-cli:commons-cli:1.2" level="project" />
+    <orderEntry type="library" name="Maven: postgresql:postgresql:9.1-901-1.jdbc4" level="project" />
     <orderEntry type="library" name="Maven: com.restfb:restfb:1.6.14" level="project" />
     <orderEntry type="library" name="Maven: org.scribe:scribe:1.1.2" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
