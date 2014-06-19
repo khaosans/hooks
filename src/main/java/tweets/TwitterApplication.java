@@ -11,7 +11,7 @@ public class TwitterApplication {
     private final Logger logger = Logger.getLogger(TwitterApplication.class.getName());
 
     public static void main(String[] args) throws TwitterException {
-        new TwitterApplication().searchTweets();
+//        new TwitterApplication().searchTweets();
 //        StatusListener listener = new StatusListener() {
 //            public void onStatus(Status status) {
 //                System.out.println(status.getUser().getName() + " : " + status.getText());
@@ -92,7 +92,7 @@ public class TwitterApplication {
 
     public String getTweets() throws TwitterException {
         Twitter twitter = TwitterFactory.getSingleton();
-        String tweets = null;
+        String tweets = "";
         Query query = new Query("khaosans");
         QueryResult result = twitter.search(query);
         for (Status status : result.getTweets()) {
